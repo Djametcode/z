@@ -19,6 +19,15 @@ router.post('/login', [AuthController, 'loginUser'])
 
 router
   .group(() => {
+    router.get('/update-todo/:id', async ({ params, inertia, auth }: HttpContext) => {
+      const user = await auth.authenticate()
+
+      const todo = await user.related('todos').query().where('id', params.id).firstOrFail()
+
+      return inertia.render('landing/update', {
+        todos: todo,
+      })
+    })
     router.get('/dashboard', async ({ inertia, auth }: HttpContext) => {
       const user = await auth.authenticate()
       await user.load('todos')
@@ -35,7 +44,9 @@ router
     })
     router.post('/logout', [AuthController, 'logOut'])
     router.post('/create-todo', [TodosController, 'createTodo'])
-    // router.get('/get-todo', [TodosController, 'getTodo'])
+    router.delete('/delete-todo/:id', [TodosController, 'deleteTodo'])
+    router.put('/update-todo/:id', [TodosController, 'updateTodo'])
+    router.get('/get-todo', [TodosController, 'getTodo'])
   })
   .use(
     middleware.auth({
