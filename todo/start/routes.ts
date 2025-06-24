@@ -42,6 +42,10 @@ router
         todos: user.todos, // ini array todo-nya
       })
     })
+
+    router.get('/create', async ({ inertia }: HttpContext) => {
+      return inertia.render('landing/create')
+    })
     router.post('/logout', [AuthController, 'logOut'])
     router.post('/create-todo', [TodosController, 'createTodo'])
     router.delete('/delete-todo/:id', [TodosController, 'deleteTodo'])
