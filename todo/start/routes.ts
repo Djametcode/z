@@ -51,6 +51,9 @@ router
     router.delete('/delete-todo/:id', [TodosController, 'deleteTodo'])
     router.put('/update-todo/:id', [TodosController, 'updateTodo'])
     router.get('/get-todo', [TodosController, 'getTodo'])
+    router.get('/profile', async ({ inertia }: HttpContext) => {
+      return inertia.render('landing/profile')
+    })
   })
   .use(
     middleware.auth({
