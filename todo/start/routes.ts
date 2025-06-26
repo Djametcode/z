@@ -51,8 +51,17 @@ router
     router.delete('/delete-todo/:id', [TodosController, 'deleteTodo'])
     router.put('/update-todo/:id', [TodosController, 'updateTodo'])
     router.get('/get-todo', [TodosController, 'getTodo'])
-    router.get('/profile', async ({ inertia }: HttpContext) => {
-      return inertia.render('landing/profile')
+    router.get('/profile', async ({ inertia, auth }: HttpContext) => {
+      const user = await auth.authenticate()
+      await user.load('todos')
+      return inertia.render('landing/profile', {
+          user: {
+          id: user.id,
+          username: user.username,
+          email: user.email,
+        },
+        todos: user.todos
+      })
     })
   })
   .use(
