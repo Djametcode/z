@@ -19,8 +19,15 @@ export default class Todo extends BaseModel {
   @column()
   declare userId: number
 
+  @column()
+  declare startDate: DateTime
+
+  @column()
+  declare endDate: DateTime
+
   @belongsTo(() => User)
   declare user: BelongsTo<typeof User>
+
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
