@@ -12,12 +12,12 @@
           placeholder="Tulis deskripsi..."></textarea>
 
           <div class="">
-            <label for="start_date" class="block pb-2 text-sm font-medium text-gray-700">Nama Kegiatan :</label>
+            <label for="start_date" class="block pb-2 text-sm font-medium text-gray-700">Waktu Mulai :</label>
             <input v-model="form.start_date" id="start_date" type="datetime-local"
               class="w-full border px-3 py-2 rounded mb-4">
           </div>
           <div>
-            <label for="end_date" class="block pb-2 text-sm font-medium text-gray-700">Tanggal Selesai :</label>
+            <label for="end_date" class="block pb-2 text-sm font-medium text-gray-700">Waktu Selesai :</label>
             <input v-model="form.end_date" id="end_date" type="datetime-local"
               class="w-full border px-3 py-2 rounded">
           </div>
