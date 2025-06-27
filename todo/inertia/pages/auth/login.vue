@@ -18,9 +18,9 @@ const submit = () => {
   <div class="min-h-screen bg-slate-100 flex flex-col items-center pt-12 px-4">
     <!-- Header -->
     <header class="w-full max-w-5xl flex justify-between items-center mb-10">
-      <Link href="/" class="text-lg font-bold text-blue-600 hover:underline">Todo List Kita</Link>
+      <Link href="/" class="text-lg font-bold text-pink-400 hover:underline">Todo List Kita</Link>
       <div class="space-x-4">
-        <Link href="/login" class="text-blue-600 font-medium">Login</Link>
+        <Link href="/login" class="text-pink-400 font-medium">Login</Link>
         <Link href="/register" class="text-gray-700 hover:text-blue-600">Register</Link>
       </div>
     </header>
@@ -55,7 +55,7 @@ const submit = () => {
 
         <button
           type="submit"
-          class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded"
+          class="w-full bg-pink-400 hover:bg-pink-600 text-white py-2 rounded"
           :disabled="form.processing"
         >
           Login

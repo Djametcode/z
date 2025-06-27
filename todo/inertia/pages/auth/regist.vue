@@ -18,12 +18,12 @@ const submit = () => {
   <Head title="Register" />
   <div class="min-h-screen bg-slate-100 flex flex-col items-center pt-12 px-4">
     <header class="w-full max-w-5xl flex justify-between items-center mb-10">
-      <Link href="/" class="text-lg font-bold text-blue-600 hover:underline">
+      <Link href="/" class="text-lg font-bold text-pink-400 hover:underline">
   Todo List Kita
 </Link>
       <div class="space-x-4">
-        <Link href="/login" class="text-gray-700 hover:text-blue-600">Login</Link>
-        <Link href="/register" class="text-gray-700 hover:text-blue-600">Register</Link>
+        <Link href="/login" class="text-gray-700 hover:text-pink-600">Login</Link>
+        <Link href="/register" class="text-gray-700 hover:text-pink-600">Register</Link>
       </div>
     </header>
 
@@ -33,7 +33,7 @@ const submit = () => {
         <input v-model="form.username" type="text" placeholder="Nama Lengkap" class="w-full border rounded px-3 py-2" required />
         <input v-model="form.email" type="email" placeholder="Email" class="w-full border rounded px-3 py-2" required />
         <input v-model="form.password" type="password" placeholder="Password" class="w-full border rounded px-3 py-2" required />
-        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded">Daftar</button>
+        <button type="submit" class="w-full bg-pink-400 hover:bg-pink-700 text-white py-2 rounded">Daftar</button>
         <div v-if="form.errors.email" class="text-red-500 text-sm">
           {{ form.errors.email }}
         </div>
