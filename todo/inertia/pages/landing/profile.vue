@@ -39,8 +39,8 @@
                                 </div>
         
                                 <!-- Titik Tiga -->
-                                <div class="relative menu-wrapper">
-                                    <button @click.stop="toggleMenu(todo.id)">
+                                <div class=" menu-wrapper">
+                                    <button class=" absolute right-2 top-2" @click.stop="toggleMenu(todo.id)">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
                                             class="size-6">
                                             <path fill-rule="evenodd"

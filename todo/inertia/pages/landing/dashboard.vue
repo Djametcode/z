@@ -67,7 +67,7 @@
             @click="selectedDate = date.toISODate()"
             :class="[
               'px-3 py-1 relative font-medium bg-slate-50/60 text-center flex items-center justify-center cursor-pointer',
-              date.toISODate() === selectedDate ? 'text-3xl w-[50px] h-[50px] rounded-xl bg-black text-white' : 'w-[40px] h-[40px] rounded-lg text-sm'
+              date.toISODate() === selectedDate ? 'text-3xl w-[50px] h-[50px] rounded-xl text-black' : 'w-[40px] h-[40px] rounded-lg text-sm'
             ]"
           >
             <div>{{ date.day }}</div>
