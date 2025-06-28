@@ -13,7 +13,7 @@ import { Head, Link } from '@inertiajs/vue3'
       <img src="../../public/image/kucing-uas.png" alt="" srcset="">
     </div>
     <div class="text-center max-sm:mt-16">
-      <p class=" max-sm:hidden text-gray-600 mb-8 text-lg"><q>Kelola tugasmu dengan lebih teratur dan rapi</q></p>
+      <p class=" max-sm:hidden text-gray-600 mb-8 text-lg"><q>Buat dan rencanakan kegiatan sehari - harimu</q></p>
 
       <div class="flex gap-4 justify-center">
         <Link href="/login" class="px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded shadow transition">
