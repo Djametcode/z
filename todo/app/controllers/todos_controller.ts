@@ -3,7 +3,12 @@ import type { HttpContext } from '@adonisjs/core/http'
 
 export default class TodosController {
   public async createTodo({ request, response, auth }: HttpContext) {
-    const { title, description, start_date, end_date } = request.only(['title', 'description', 'start_date', 'end_date'])
+    const { title, description, start_date, end_date } = request.only([
+      'title',
+      'description',
+      'start_date',
+      'end_date',
+    ])
 
     const requiredFields = ['title', 'description', 'start_date', 'end_date']
 
@@ -18,7 +23,7 @@ export default class TodosController {
       title,
       description,
       startDate: start_date,
-      endDate: end_date
+      endDate: end_date,
     })
 
     return response.redirect('/dashboard')

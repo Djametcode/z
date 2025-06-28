@@ -1,17 +1,20 @@
 <template>
-  <div class="min-h-screen bg-gray-100 flex flex-col">
+  <div class="min-h-screen home flex flex-col md:pt-[50px]">
     <main class="flex-1 p-6">
-      <div class="bg-white rounded shadow p-4">
-        <h2 class="text-lg font-semibold mb-4">Selamat Datang!</h2>
-        <p class="text-gray-600">Kamu berhasil login dan ini adalah halaman dashboard.</p>
+      <div class=" w-full h-full p-5 text-2xl rounded-3xl">
+        <h1>Selamat datang di todo list kita</h1>
+        <p>Atur kegiatanmu, capai tujuanmu, dan jadi lebih produktif setiap hari.</p>
+      </div>
+      <div>
+        <h1 class=" text-xl font-bold pt-5">Tanggal :</h1>
       </div>
 
       <!-- Tanggal Selector -->
-      <div class="w-full overflow-x-scroll flex items-center justify-start">
+      <div class="w-full overflow-x-scroll flex items-center justify-start pb-16">
         <div class="flex gap-2 mt-4">
           <span v-for="(date, index) in dates" :key="index" @click="selectedDate = date" :class="[
-            'px-3 py-1 shadow rounded font-medium cursor-pointer',
-            date === selectedDate ? 'bg-black text-white' : 'bg-pink-200 text-black'
+            'px-3 py-1 shadow rounded font-medium md:w-[75px] md:h-[75px] md:flex md:items-center md:justify-center cursor-pointer',
+            date === selectedDate ? 'bg-black text-white' : 'bg-slate-50 text-black'
           ]">
             {{ date }}
           </span>
@@ -20,11 +23,11 @@
 
       <!-- Todo List -->
       <div class="mt-6">
-        <h2 class="text-lg font-semibold">Todo List Kamu:</h2>
-        <ul class="mt-2 space-y-5">
+        <h2 class="text-lg font-semibold md:text-xl md:pb-3">Todo List Kamu:</h2>
+        <ul class="mt-2 space-y-5 md:mt-0 md:space-y-0 md:gap-5 md:grid md:grid-cols-4 md:overflow-y-scroll md:h-[550px]">
           <li v-for="(todo, index) in filteredTodos" :key="todo.id"
             :class="['rounded-lg shadow flex justify-between items-start', getRandomBg(index)]">
-            <div class="p-6 flex flex-col gap-3 w-full">
+            <div class="p-6 flex flex-col gap-3 w-full md:h-[250px]">
               <div class="flex justify-between items-start">
                 <div class="flex gap-3">
                   <div>

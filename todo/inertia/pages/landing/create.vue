@@ -1,29 +1,33 @@
 <template>
-  <div class=" w-screen h-screen flex flex-col gap-5 items-center justify-start p-11 bg-slate-100">
-    <h1 class=" text-xl font-bold pb-7">Buat todo baru</h1>
-    <div class=" w-[350px]">
-      <form @submit.prevent="submit" class="space-y-4 w-full h-full">
-        <div>
-          <label for="title" class="block pb-1 text-sm font-medium text-gray-700">Kegiatan :</label>
-          <input v-model="form.title" type="text" placeholder="Nama kegiatan" class="w-full placeholder:text-sm border px-3 py-2 rounded" required />
-        </div>
-        <label for="description" class="block pb-none text-sm font-medium text-gray-700">Detail kegiatan :</label>
-        <textarea v-model="form.description" class="w-full placeholder:text-sm p-2 border rounded resize-none" rows="4"
-          placeholder="Tulis deskripsi..."></textarea>
-
-          <div class="">
-            <label for="start_date" class="block pb-2 text-sm font-medium text-gray-700">Waktu Mulai :</label>
-            <input v-model="form.start_date" id="start_date" type="datetime-local"
-              class="w-full border px-3 py-2 rounded mb-4">
-          </div>
+  <div class=" w-screen h-screen flex flex-col gap-5 items-center justify-center p-11 bg-white md:bg-white home">
+    <div class=" bg-slate-50 p-10 rounded-3xl">
+      <h1 class=" text-2xl font-bold pb-7 text-center">Buat todo baru</h1>
+      <div class=" w-[475px] h-[500px]">
+        <form @submit.prevent="submit" class="space-y-4 w-full h-full">
           <div>
-            <label for="end_date" class="block pb-2 text-sm font-medium text-gray-700">Waktu Selesai :</label>
-            <input v-model="form.end_date" id="end_date" type="datetime-local"
-              class="w-full border px-3 py-2 rounded">
+            <label for="title" class="block pb-1 text-sm font-medium text-gray-700">Kegiatan :</label>
+            <input v-model="form.title" type="text" placeholder="Nama kegiatan" class="w-full bg-slate-200 placeholder:text-sm px-3 py-2 rounded-lg" required />
           </div>
-
-        <button type="submit" class="w-full bg-pink-400 hover:bg-pink-600 text-white py-2 text-sm rounded">buat todo</button>
-      </form>
+          <label for="description" class="block pb-none text-sm font-medium text-gray-700">Detail kegiatan :</label>
+          <textarea v-model="form.description" class="w-full placeholder:text-sm p-2 bg-slate-200 rounded resize-none" rows="4"
+            placeholder="Tulis deskripsi..."></textarea>
+  
+            <div class="">
+              <label for="start_date" class="block pb-2 text-sm font-medium text-gray-700">Waktu Mulai :</label>
+              <input v-model="form.start_date" id="start_date" type="datetime-local"
+                class="w-full bg-slate-200 px-3 py-2 rounded mb-4">
+            </div>
+            <div>
+              <label for="end_date" class="block pb-2 text-sm font-medium text-gray-700">Waktu Selesai :</label>
+              <input v-model="form.end_date" id="end_date" type="datetime-local"
+                class="w-full bg-slate-200 px-3 py-2 rounded">
+            </div>
+  
+            <div class=" flex items-center justify-center">
+              <button type="submit" class="w-[100px] bg-pink-400 hover:bg-pink-600 text-white py-2 text-sm rounded">buat todo</button>
+            </div>
+        </form>
+      </div>
     </div>
   </div>
 </template>

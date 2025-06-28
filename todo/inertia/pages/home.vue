@@ -4,26 +4,20 @@ import { Head, Link } from '@inertiajs/vue3'
 
 <template>
   <Head title="Home" />
-  <!-- <main class=" p-5 bg-pink-300 h-screen w-screen">
-    <div class=" flex flex-col gap-3 text-slate-900">
-      <h1 class=" font-bold text-4xl">Todo List Kita</h1>
-      <p class=" text-sm">Kelola tugasmu dengan lebih teratur dan rapi</p>
+  <main class=" relative home min-h-screen flex flex-col items-center justify-center">
+    <div class=" absolute top-8 left-8 font-bold text-4xl max-sm:text-2xl">
+      <h1>Todo List Kita</h1>
+       <p class=" text-black mb-8 text-xl max-sm:text-sm md:hidden"><q>Kelola tugasmu dengan lebih teratur dan rapi</q></p>
     </div>
-    <div class=" text-sm h-[20px] w-">
-      <Link class="  bg-slate-50" href="login">Login</Link>
+    <div>
+      <img src="../../public/image/kucing-uas.png" alt="" srcset="">
     </div>
-  </main> -->
-  <main class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-pink-400 to bg-pink-200">
-    <div class="text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Todo List Kita</h1>
-      <p class="text-gray-600 mb-8">Kelola tugasmu dengan lebih teratur dan rapi.</p>
+    <div class="text-center max-sm:mt-16">
+      <p class=" max-sm:hidden text-gray-600 mb-8 text-xl max-sm:text-lg"><i><q>Kelola tugasmu dengan lebih teratur dan rapi</q></i></p>
 
       <div class="flex gap-4 justify-center">
         <Link href="/login" class="px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded shadow transition">
           Login
-        </Link>
-        <Link href="/register" class="px-6 py-2 bg-gray-300 hover:bg-gray-400 text-gray-900 rounded shadow transition">
-          Register
         </Link>
       </div>
     </div>

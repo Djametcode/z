@@ -1,11 +1,12 @@
 <template>
   <div class="h-screen w-screen flex flex-col overflow-hidden">
-    <div class="fixed top-0 w-full h-[55px] flex items-center pl-8 pr-8 bg-pink-300">
+    <div class="fixed z-30 top-0 w-full md:h-[100px] h-[55px] flex items-center pl-8 pr-8 bg-slate-50">
       <div class=" w-full flex h-full items-center justify-between">
-        <h1 class="font-bold text-lg text-white">Dashboard</h1>
-        <div class=" flex h-[30px] pl-2 pr-2 rounded-lg items-center gap-2 bg-slate-50 text-sm">
+        <h1 class="font-bold text-lg  md:text-3xl">Dashboard</h1>
+        <div class=" flex md:gap-4 h-[30px] pl-2 pr-2 rounded-lg items-center gap-2 md:font-bold md:text-xl text-sm">
+          <Link class=" max-sm:hidden" href="/create">Create Todo</Link>
           <p>{{ user.username }}</p>
-          <button @click="logout()">logout</button>
+          <button class=" md:underline" @click="logout()">logout</button>
         </div>
       </div>
     </div>
@@ -13,7 +14,7 @@
     <div class="flex-1 overflow-y-auto mt-[40px]">
       <slot />
     </div>
-    <div class="fixed bottom-0 w-full h-[65px] flex items-center justify-around pl-5 bg-pink-200 text-slate-700 z-10">
+    <div class="fixed md:hidden bottom-0 w-full h-[65px] flex items-center justify-around pl-5 bg-pink-200 text-slate-700 z-10">
       <Link class=" flex flex-col text-sm items-center" href="/dashboard">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-7">
         <path fill-rule="evenodd"
