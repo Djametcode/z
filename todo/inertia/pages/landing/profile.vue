@@ -40,7 +40,7 @@
         
                                 <!-- Titik Tiga -->
                                 <div class=" menu-wrapper">
-                                    <button class=" absolute right-2 top-2" @click.stop="toggleMenu(todo.id)">
+                                    <button class=" absolute right-4 top-4" @click.stop="toggleMenu(todo.id)">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
                                             class="size-6">
                                             <path fill-rule="evenodd"
