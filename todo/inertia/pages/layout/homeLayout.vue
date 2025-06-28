@@ -1,46 +1,26 @@
 <template>
-  <div class="h-screen w-screen flex flex-col overflow-hidden">
-    <div class="fixed z-30 top-0 w-full md:h-[100px] h-[55px] flex items-center pl-8 pr-8 bg-slate-50">
-      <div class=" w-full flex h-full items-center justify-between">
-        <h1 class="font-bold text-lg  md:text-3xl">Dashboard</h1>
-        <div class=" flex md:gap-4 h-[30px] pl-2 pr-2 rounded-lg items-center gap-2 md:font-bold md:text-xl text-sm">
-          <Link class=" max-sm:hidden" href="/create">Create Todo</Link>
-          <p>{{ user.username }}</p>
-          <button class=" md:underline" @click="logout()">logout</button>
+  <div class="w-full min-h-screen bg-white">
+    <!-- Top Navbar -->
+    <div class="fixed z-30 top-0 left-0 right-0 bg-slate-50 h-[75px]">
+      <div class="max-w-[1200px] w-full mx-auto h-full flex items-center justify-between px-4 text-black">
+        <h1 class="font-bold md:text-2xl">Dashboard</h1>
+        <div class="flex gap-2 text-sm items-center">
+          <Link href="/create">Create Todo</Link>
+          <Link href="/profile">{{ user.username }}</Link>
+          <button class="md:underline" @click="logout()">Logout</button>
         </div>
       </div>
     </div>
 
-    <div class="flex-1 overflow-y-auto mt-[40px]">
-      <slot />
-    </div>
-    <div class="fixed md:hidden bottom-0 w-full h-[65px] flex items-center justify-around pl-5 bg-pink-200 text-slate-700 z-10">
-      <Link class=" flex flex-col text-sm items-center" href="/dashboard">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-7">
-        <path fill-rule="evenodd"
-          d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z"
-          clip-rule="evenodd" />
-      </svg>
-      <p>Home</p>
-      </Link>
-      <Link class=" flex flex-col text-sm items-center" href="/create">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-7">
-        <path
-          d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
-      </svg>
-      <p>Create Todo</p>
-      </Link>
-      <Link class=" flex flex-col text-sm items-center" href="/profile">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-7">
-        <path
-          d="M10 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3.465 14.493a1.23 1.23 0 0 0 .41 1.412A9.957 9.957 0 0 0 10 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 0 0-13.074.003Z" />
-      </svg>
-
-      <p>Profile</p>
-      </Link>
+    <!-- Main Content -->
+    <div class="pt-[90px] px-4 home h-screen">
+      <div class="max-w-[1200px] w-full mx-auto">
+        <slot />
+      </div>
     </div>
   </div>
 </template>
+
   
   <script setup lang="ts">
   import { Link, Head, useForm, router } from '@inertiajs/vue3'

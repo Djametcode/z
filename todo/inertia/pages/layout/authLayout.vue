@@ -1,17 +1,30 @@
 <template>
-  <div class="w-screen">
-    <div
-      class="fixed top-0 w-full flex max-sm:pl-5 max-sm:pr-5 max-sm:pt-5 pl-[150px] pr-[150px] pt-7 items-center justify-between"
-    >
-      <h1 class="text-4xl max-sm:text-2xl font-bold">Todo List Kita</h1>
-      <div class="text-lg w-[100px] flex items-center justify-center bg-slate-50 p-2 rounded-xl">
-        <Link href="/login">Login</Link>
+  <div class="w-full min-h-screen bg-white">
+    <!-- Header -->
+    <div class="fixed top-0 left-0 w-full z-20 ">
+      <div class="mx-auto max-w-[1200px] flex items-center justify-between px-5 sm:px-[150px] pt-6 pb-3">
+        <Link href="/" class="text-2xl font-bold text-gray-900">Todo List Kita</Link>
+        <div class="text-lg flex items-center justify-center bg-slate-50 px-4 py-2 rounded-xl shadow">
+          <Link href="/login">Login</Link>
+        </div>
       </div>
     </div>
-    <div class="fixed bottom-14 left-24">
-      <img src="../../../public/image/kucing-uas.png" alt="" srcset="" />
+
+    <!-- Bottom Image -->
+    <div class="fixed bottom-0 left-5 z-10">
+      <img
+        class="w-[200px] h-[200px] object-contain"
+        src="../../../public/image/kucing-uas.png"
+        alt="Kucing"
+      />
     </div>
-    <slot />
+
+    <!-- Page Content -->
+    <div class="pt-[100px] px-5 home">
+      <div class="max-w-[1200px] mx-auto">
+        <slot />
+      </div>
+    </div>
   </div>
 </template>
 

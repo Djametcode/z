@@ -1,6 +1,12 @@
 <template>
-    <slot />
-
+    <div class=" h-screen w-screen">
+        <slot />
+        
+    <div class="fixed bottom-0 left-5">
+      <img class=" w-[200px] h-[200px] object-contain" src="../../../public/image/kucing-uas.png" alt="" srcset="" />
+    </div>
+    </div>
+<!-- 
     <div class="fixed md:hidden bottom-0 w-full h-[65px] flex items-center justify-around pl-5 bg-pink-200 text-slate-700 z-10">
         <Link class=" flex flex-col text-sm items-center" href="/dashboard">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-7">
@@ -25,7 +31,7 @@
 
         <p>Profile</p>
         </Link>
-    </div>
+    </div> -->
 </template>
 
 <script setup lang="ts">

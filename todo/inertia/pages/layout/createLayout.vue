@@ -1,18 +1,21 @@
 <template>
-  <div class=" w-screen">
+  <div class=" relative w-screen">
     <div
       class="fixed bg-slate-50 top-0 w-full flex max-sm:pl-5 max-sm:pr-5 max-sm:pt-5 pb-7 pl-[150px] pr-[150px] pt-7 items-center justify-between"
     >
-      <h1 class="text-4xl max-sm:text-2xl font-bold text-gray-900">Todo List Kita</h1>
-      <div class="text-xl flex gap-5 font-bold">
+      <Link href="/" class=" text-lg max-sm:text-2xl font-bold text-gray-900">Todo List Kita</Link>
+      <div class=" text-sm flex gap-5">
         <Link href="/dashboard">Home</Link>
         <Link href="/profile">Akun</Link>
       </div>
     </div>
     <slot />
+    <div class="fixed bottom-0 left-5">
+      <img class=" w-[200px] h-[200px] object-contain" src="../../../public/image/kucing-uas.png" alt="" srcset="" />
+    </div>
   </div>
 
-    <div class="fixed md:hidden bottom-0 w-full h-[65px] flex items-center justify-around pl-5 bg-pink-200 text-slate-700 z-10">
+    <!-- <div class="fixed md:hidden bottom-0 w-full h-[65px] flex items-center justify-around pl-5 bg-pink-200 text-slate-700 z-10">
       <Link class=" flex flex-col text-sm items-center" href="/dashboard">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-7">
             <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z" clip-rule="evenodd" />
@@ -32,7 +35,7 @@
 
       <p>Profile</p>
       </Link>
-    </div>
+    </div> -->
 </template>
 
 <script setup lang="ts">

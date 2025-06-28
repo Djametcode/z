@@ -1,9 +1,9 @@
 <template>
-  <div class=" w-screen h-screen flex flex-col gap-5 items-center justify-center p-11 bg-white md:bg-white home">
-    <div class=" bg-slate-50 p-10 rounded-3xl">
-      <h1 class=" text-2xl font-bold pb-7 text-center">Buat todo baru</h1>
-      <div class=" w-[475px] h-[500px]">
-        <form @submit.prevent="submit" class="space-y-4 w-full h-full">
+  <div class=" w-screen h-screen flex flex-col gap-5 items-center justify-center home">
+    <div class=" w-[425px] h-fit bg-slate-50 p-8 rounded-3xl">
+      <h1 class=" text-lg font-bold text-center">Buat todo baru</h1>
+      <div class=" w-full">
+        <form @submit.prevent="submit" class=" flex flex-col gap-3 w-full h-full text-sm">
           <div>
             <label for="title" class="block pb-1 text-sm font-medium text-gray-700">Kegiatan :</label>
             <input v-model="form.title" type="text" placeholder="Nama kegiatan" class="w-full bg-slate-200 placeholder:text-sm px-3 py-2 rounded-lg" required />

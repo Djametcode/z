@@ -21,7 +21,7 @@ const submit = () => {
 
 <template>
    <Head title="Login" />
-  <div class=" login min-h-screen bg-slate-100 flex flex-col items-center justify-center pt-12 px-4">
+  <div class=" h-screen flex flex-col items-center justify-center pt-12 px-4">
     <div class=" relative bg-slate-50 w-[550px] h-[500px] p-10 rounded-4xl shadow">
       <h2 class="text-2xl font-semibold text-center mb-6">Buat akun yuk!</h2>
       <form @submit.prevent="submit" class=" flex flex-col gap-3 mt-10">
