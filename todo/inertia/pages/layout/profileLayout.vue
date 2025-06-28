@@ -1,7 +1,7 @@
 <template>
     <slot />
 
-    <div class="fixed bottom-0 w-full h-[65px] flex items-center justify-around pl-5 bg-pink-200 text-slate-700 z-10">
+    <div class="fixed md:hidden bottom-0 w-full h-[65px] flex items-center justify-around pl-5 bg-pink-200 text-slate-700 z-10">
         <Link class=" flex flex-col text-sm items-center" href="/dashboard">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-7">
             <path fill-rule="evenodd"

@@ -4,7 +4,7 @@
       class="fixed top-0 w-full flex max-sm:pl-5 max-sm:pr-5 max-sm:pt-5 pl-[150px] pr-[150px] pt-7 items-center justify-between"
     >
       <h1 class="text-4xl max-sm:text-2xl font-bold">Todo List Kita</h1>
-      <div class="text-xl underline font-bold">
+      <div class="text-lg w-[100px] flex items-center justify-center bg-slate-50 p-2 rounded-xl">
         <Link href="/login">Login</Link>
       </div>
     </div>
