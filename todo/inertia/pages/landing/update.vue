@@ -1,6 +1,6 @@
 <template>
   <div class=" w-screen h-screen flex flex-col gap-5 items-center justify-center home">
-    <div class=" w-[425px] h-fit bg-slate-50 p-8 rounded-3xl">
+    <div class=" w-[500px] h-[400px] bg-slate-50 p-8 rounded-3xl">
       <h1 class=" text-lg font-bold text-center">Update Todo</h1>
       <div class=" w-full">
         <form @submit.prevent="submit" class=" flex flex-col gap-3 w-full h-full text-sm">
@@ -16,7 +16,7 @@
             </div>
   
             <div class=" flex items-center justify-center">
-              <button type="submit" class="w-[100px] bg-pink-400 hover:bg-pink-600 text-white py-2 text-sm rounded">buat todo</button>
+              <button type="submit" class="w-[100px] bg-pink-400 hover:bg-pink-600 text-white py-2 text-sm rounded">Update todo</button>
             </div>
         </form>
       </div>

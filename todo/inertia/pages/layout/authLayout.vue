@@ -1,10 +1,10 @@
 <template>
-  <div class="w-full min-h-screen bg-white">
+  <div class="w-full max-h-screen">
     <!-- Header -->
-    <div class="fixed top-0 left-0 w-full z-20 ">
+    <div class="fixed bg-slate-50 top-0 left-0 w-full z-20 ">
       <div class="mx-auto max-w-[1200px] flex items-center justify-between px-5 sm:px-[150px] pt-6 pb-3">
         <Link href="/" class="text-2xl font-bold text-gray-900">Todo List Kita</Link>
-        <div class="text-lg flex items-center justify-center bg-slate-50 px-4 py-2 rounded-xl shadow">
+        <div class="text-lg flex items-center justify-center px-4 py-2">
           <Link href="/login">Login</Link>
         </div>
       </div>
@@ -20,7 +20,7 @@
     </div>
 
     <!-- Page Content -->
-    <div class="pt-[100px] px-5 home">
+    <div class="pt-[100px] px-5 home h-screen">
       <div class="max-w-[1200px] mx-auto">
         <slot />
       </div>

@@ -21,9 +21,9 @@
                 <ul class="mt-2 space-y-5">
                     <li v-for="(todo, index) in todos" :key="todo.id"
                         :class="['rounded-lg shadow relative flex justify-between items-start', getRandomBg(index)]">
-                        <div class="p-6 h-[175px] w-[300px] flex flex-col gap-3">
+                        <div class="p-6 h-[175px] flex flex-col gap-3">
                             <div class="flex justify-between items-start">
-                                <div class="flex gap-3">
+                                <div class="flex gap-3 w-[300px]">
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                             class="size-6">

@@ -4,7 +4,7 @@
     <div class="fixed z-30 top-0 left-0 right-0 bg-slate-50 h-[75px]">
       <div class="max-w-[1200px] w-full mx-auto h-full flex items-center justify-between px-4 text-black">
         <h1 class="font-bold md:text-2xl">Dashboard</h1>
-        <div class="flex gap-2 text-sm items-center">
+        <div class="flex gap-2 text-base items-center">
           <Link href="/create">Create Todo</Link>
           <Link href="/profile">{{ user.username }}</Link>
           <button class="md:underline" @click="logout()">Logout</button>
